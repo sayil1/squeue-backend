@@ -4,8 +4,8 @@ const port = 2194
 var cors = require('cors');
 const queueModel = require("./models/queModel")
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/queue', { useNewUrlParser: true });
-// mongoose.connect('mongodb+srv://sayil:sayil2194@cluster0-myd1t.mongodb.net/test?retryWrites=true&w=majority')
+// mongoose.connect('mongodb://localhost/queue', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://sayil:sayil2194@cluster0-myd1t.mongodb.net/test?retryWrites=true&w=majority')
 const bodyParser = require('body-parser')
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
