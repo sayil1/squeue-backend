@@ -72,5 +72,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     // we're connected!
 });
+app.set('port', (process.env.PORT || port));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(app.get('port'), () => console.log(`Example app listening on port ${app.get('port')}!`))
